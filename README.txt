@@ -9,13 +9,12 @@ A web app that predicts whether a tweet is positive or negative, built with an L
 Python, TensorFlow/Keras, Streamlit, NLTK, NumPy, Pandas, Scikit-learn
 
 ## Project Files
-| File | Description |
-|------|-------------|
-| `app.py` | Streamlit web app for real-time sentiment prediction |
-| `project.ipynb` | Model training, preprocessing, and evaluation |
-| `sentiment_model.h5` | Trained LSTM model |
-| `tokenizer.pkl` | Saved tokenizer for text preprocessing |
-| `requirements.txt` | Python dependencies |
+
+`app.py` : Streamlit web app for real-time sentiment prediction 
+`project.ipynb` : Model training, preprocessing, and evaluation 
+`sentiment_model.h5` : Trained LSTM model 
+`tokenizer.pkl` : Saved tokenizer for text preprocessing 
+`requirements.txt` : Python dependencies 
 
 ## Dataset
 Trained on the [Sentiment140](http://help.sentiment140.com/) dataset — 1.6M labeled tweets.
