@@ -3,7 +3,7 @@
 A web app that predicts whether a tweet is positive or negative, built with an LSTM neural network and deployed on Hugging Face Spaces.
 
 ## Author
-**Saanvi Chauhan** — B.Tech CSE (IoT & IS)
+Saanvi Chauhan
 
 ## Tech Stack
 Python, TensorFlow/Keras, Streamlit, NLTK, NumPy, Pandas, Scikit-learn
