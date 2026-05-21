@@ -1,6 +1,6 @@
-streamlit
-tensorflow-cpu
+gradio
+tensorflow
 numpy
-nltk
-h5py
+pandas
 scikit-learn
+nltk
