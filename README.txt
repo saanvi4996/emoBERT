@@ -1,34 +1,37 @@
 # Sentiment Analysis Using LSTM
 
-A web app that predicts whether a tweet is positive or negative, built with an LSTM neural network and deployed on Hugging Face Spaces.
+A web app that predicts whether a tweet is positive or negative, built with a 
+lightweight LSTM neural network and deployed on Hugging Face Spaces.
+
+🔗 [Live Demo](https://saanvi4996-sentiment-analysis.hf.space)
 
 ## Author
 Saanvi Chauhan
 
+## Model
+Embedding → LSTM → Dropout → Dense architecture trained on 1.6M tweets.  
+Achieves ~88% validation accuracy on the Sentiment140 dataset.
+
 ## Tech Stack
-Python, TensorFlow/Keras, Streamlit, NLTK, NumPy, Pandas, Scikit-learn
+Python, TensorFlow/Keras, Gradio, NLTK, NumPy, Pandas, Scikit-learn
 
 ## Project Files
-
-`app.py` : Streamlit web app for real-time sentiment prediction 
-`project.ipynb` : Model training, preprocessing, and evaluation 
-`sentiment_model.h5` : Trained LSTM model 
-`tokenizer.pkl` : Saved tokenizer for text preprocessing 
-`requirements.txt` : Python dependencies 
+`app.py` — Gradio web app for real-time sentiment prediction  
+`project.ipynb` — Model training, preprocessing, and evaluation  
+`sentiment_model.h5` — Trained LSTM model  
+`tokenizer.pkl` — Saved tokenizer for text preprocessing  
+`requirements.txt` — Python dependencies  
 
 ## Dataset
-Trained on the [Sentiment140](http://help.sentiment140.com/) dataset — 1.6M labeled tweets.
+Trained on the [Sentiment140](http://help.sentiment140.com/) dataset with 1.6M labeled tweets.
 
 ## Getting Started
-
 ```bash
 git clone https://github.com/saanvi4996/Sentiment-Analysis-LSTM.git
 cd Sentiment-Analysis-LSTM
 pip install -r requirements.txt
-streamlit run app.py
+python app.py
 ```
 
-The app will open in your browser. Type any tweet or piece of text and get an instant sentiment prediction.
-
 ## Deployment
-Live on [Hugging Face Spaces](https://huggingface.co/spaces) — no setup needed to try it out.
+Live on [Hugging Face Spaces](https://saanvi4996-sentiment-analysis.hf.space).
