@@ -1,5 +1,5 @@
-venv/
 **pycache**/
-.ipynb_checkpoints/
 *.pyc
+venv/
+.ipynb_checkpoints/
 emobert_model/
