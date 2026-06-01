@@ -1,17 +1,14 @@
-EmoBERT — Emotion Detection via REST API
-=========================================
+EmoBERT — Emotion Aware Social Media Analyzer
+
 Name: Saanvi Chauhan
-Registration No: 23FE10CII00225
 Accuracy: 93.5% | F1 Macro: 89%
 
-DESCRIPTION
------------
+DESCRIPTION:
 EmoBERT detects 6 emotions (sadness, joy, love, anger, fear, surprise)
 from social media text using BERT fine-tuned on dair-ai/emotion dataset.
-Features a FastAPI REST backend and Streamlit frontend with analysis history.
+It features a FastAPI REST backend and Streamlit frontend with analysis history.
 
-PROJECT STRUCTURE
------------------
+PROJECT STRUCTURE:
 emoBERT/
   ├── api.py             FastAPI backend — loads model, serves /predict endpoint
   ├── app.py             Streamlit frontend — calls API, shows results + history
@@ -19,8 +16,7 @@ emoBERT/
   ├── README.txt         This file
   └── emobert_model/     Trained BERT model (download from Colab)
 
-API ENDPOINTS
--------------
+API ENDPOINTS:
 GET  /          → API status
 GET  /health    → Health check
 POST /predict   → Predict emotion
@@ -37,8 +33,7 @@ Example response:
     "emoji": "😄"
   }
 
-HOW TO RUN
-----------
+HOW TO RUN:
 1. pip install -r requirements.txt
 
 2. Start the API (Terminal 1):
@@ -50,8 +45,7 @@ HOW TO RUN
    streamlit run app.py
    → App runs at http://localhost:8501
 
-TECH STACK
-----------
+TECH STACK:
 - BERT (bert-base-uncased) via HuggingFace Transformers
 - FastAPI + Uvicorn (REST API backend)
 - Streamlit + Plotly (frontend)
