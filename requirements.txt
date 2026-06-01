@@ -1,0 +1,14 @@
+transformers
+torch
+datasets
+accelerate
+fastapi
+uvicorn
+streamlit
+scikit-learn
+numpy
+pandas
+plotly
+requests
+sentencepiece
+safetensors
