@@ -1,4 +1,3 @@
-emobert_model/
 venv/
 **pycache**/
 *.pyc
