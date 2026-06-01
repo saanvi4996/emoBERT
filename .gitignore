@@ -2,4 +2,4 @@ venv/
 **pycache**/
 .ipynb_checkpoints/
 *.pyc
-emolens_model/
+emobert_model/
