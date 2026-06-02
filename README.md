@@ -44,9 +44,13 @@ EmoBERT is a BERT-based NLP application that detects emotions in social media te
 
 ```bash
 emoBERT/
-├── app.py
-├── requirements.txt
-└── README.md
+├── app.py                # Streamlit application
+├── train_model.py        # BERT fine-tuning pipeline
+├── requirements.txt      # Project dependencies
+├── README.md
+└── emobert_model/        # Saved fine-tuned model
+```
+
 ```
 
 ## Run Locally
