@@ -1,34 +1,57 @@
-# 🧠 EmoBERT — Emotion-Aware Social Media Analyzer
+# EmoBERT — Emotion-Aware Social Media Analyzer
 
-**Name:** Saanvi Chauhan  
-**Accuracy:** 93.5% | **F1 Macro:** 89%
+### Saanvi Chauhan
 
----
+**Accuracy:** 93.5% · **Macro F1 Score:** 89%
 
-## What it does
-EmoBERT detects 6 emotions from social media text using BERT
-fine-tuned on the `dair-ai/emotion` dataset.
+## Overview
 
-Emotions: sadness 😢 · joy 😄 · love ❤️ · anger 😡 · fear 😨 · surprise 😲
+EmoBERT is a BERT-based NLP application that detects emotions in social media text using a fine-tuned transformer model trained on the `dair-ai/emotion` dataset.
 
----
+### Supported Emotions
+
+* Sadness 😢
+* Joy 😄
+* Love ❤️
+* Anger 😡
+* Fear 😨
+* Surprise 😲
 
 ## Tech Stack
-- BERT (`bert-base-uncased`) via HuggingFace Transformers
-- PyTorch · Streamlit · Plotly
-- Dataset: `dair-ai/emotion` (16k tweets, 6 emotions)
-- Training: Google Colab T4 GPU
 
----
+* BERT (`bert-base-uncased`)
+* Hugging Face Transformers
+* PyTorch
+* Streamlit
+* Plotly
+* Google Colab (T4 GPU)
+
+## Features
+
+* Real-time emotion prediction
+* Confidence score visualization
+* Interactive Streamlit interface
+* Fine-tuned transformer-based NLP pipeline
+* Public cloud deployment
+
+## Dataset
+
+* `dair-ai/emotion`
+* ~16k labeled social media text samples
+* 6 emotion classes
 
 ## Project Structure
+
+```bash
 emoBERT/
-├── app.py            → Streamlit app
-├── requirements.txt  → Dependencies
-└── emobert_model/    → Fine-tuned BERT model
+├── app.py
+├── requirements.txt
+└── README.md
+```
 
----
+## Run Locally
 
-## Run locally
+```bash
 pip install -r requirements.txt
 streamlit run app.py
+```
