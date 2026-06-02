@@ -44,7 +44,7 @@ EMOJIS = {
 # LOAD MODEL
 # ---------------------------------------------------
 
-MODEL_PATH = "saanvi4996/emoBERT"
+MODEL_PATH = "emobert_model"
 @st.cache_resource
 def load_model():
 
