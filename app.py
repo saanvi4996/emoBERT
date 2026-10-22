@@ -1,3 +1,5 @@
+import os
+
 import streamlit as st
 import torch
 import plotly.express as px
@@ -19,17 +21,8 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------
-# LABELS + EMOJIS
+# EMOJIS (labels are read from the model config below)
 # ---------------------------------------------------
-
-LABELS = [
-    "sadness",
-    "joy",
-    "love",
-    "anger",
-    "fear",
-    "surprise"
-]
 
 EMOJIS = {
     "sadness": "😢",
@@ -43,7 +36,9 @@ EMOJIS = {
 # ---------------------------------------------------
 # LOAD MODEL
 # ---------------------------------------------------
-MODEL_PATH = "saanvi4996/emoBERT"
+# Hugging Face Hub repo with the fine-tuned weights; set EMOBERT_MODEL to use a local folder instead.
+MODEL_PATH = os.getenv("EMOBERT_MODEL", "saanvi4996/emoBERT")
+
 @st.cache_resource
 def load_model():
 
@@ -56,6 +51,9 @@ def load_model():
     return tokenizer, model
 
 tokenizer, model = load_model()
+
+# Use the label order saved with the model so predictions can never be mislabelled.
+LABELS = [model.config.id2label[i] for i in range(model.config.num_labels)]
 
 # ---------------------------------------------------
 # PREDICTION FUNCTION
@@ -154,7 +152,7 @@ if st.button("Analyze Emotion"):
             title="Emotion Confidence Scores",
         )
 
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
         # -------------------------------------------
         # SAVE HISTORY

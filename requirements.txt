@@ -1,8 +1,7 @@
-transformers>=4.52.0
-torch
-streamlit
-plotly
-pandas
-numpy
-safetensors
-sentencepiece
+# CPU-only PyTorch wheels: the default Linux wheel bundles CUDA (~2 GB), too large for free hosting.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.2
+transformers>=4.40,<6
+streamlit>=1.50
+plotly>=5.0
+pandas>=2.0

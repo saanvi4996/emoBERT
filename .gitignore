@@ -1,4 +1,11 @@
 venv/
-**pycache**/
+.venv/
+__pycache__/
 *.pyc
+.ipynb_checkpoints/
 
+# Model weights live on the Hugging Face Hub, not in git
+emobert_model/
+*.safetensors
+*.bin
+*.zip
